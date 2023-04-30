@@ -1,14 +1,13 @@
+import Image from "next/image";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
-import book from "public/images/bankruptcy-docs.png";
 import owl from "public/icons/owl.svg";
-import bank from "public/icons/icon_bank.svg";
-import pencil from "public/icons/icon_edit.svg";
-import message from "public/icons/icon_messages.svg";
-import people from "public/images/people.svg";
+import folder from "public/icons/icon__folder_add_.svg";
+import map from "public/icons/icon__map_.svg";
+import phone from "public/icons/icon__phone_arrow_right_bold_.svg";
 
-export default function Home() {
+export default function Contact() {
     return (
         <div className="flex-grow flex flex-col items-center bg-[#323848] min-h-screen">
             <Head>
@@ -58,94 +57,74 @@ export default function Home() {
                     </nav>
                 </div>
             </header>
-
             {/* main content */}
-            <div className="flex justify-center items-center bg-no-repeat bg-grey-100 bg-cover bg-center w-full backdrop-opacity-80 bg-[url('/images/bank.png')]">
+            <div className="flex justify-center items-center bg-no-repeat bg-grey-100 bg-cover bg-center w-full backdrop-opacity-80 bg-[url('/images/HOA_1.png')]">
                 {/* jordy info */}
 
-                <div className="flex flex-row my-24 opacity-100">
-                    <div className="flex flex-col justify-center items-center ">
-                        <div className="w-6/12 text-white">
-                            <p className="mb-3 font-bold text-4xl">Jordy</p>
+                <div className=" flex flex-row items-start justify-start w-3/6 my-28 opacity-100">
+                    <div className="flex flex-col items-start items-center ">
+                        <div className="text-white">
+                            <p className="mb-3 font-bold text-4xl">Contact Us</p>
                             <p className="mb-3 text-xl">
-                                AI-Powered HOA Document Review and Consoltation
-                                Service
+                                You are seconds away from hiring a affiliated attorney
                             </p>
-
-                            <Link href="/chat">
-                                <button className="bg-transparent border-white border-2 text-white rounded-full px-6 py-2 hover:bg-white hover:text-black transition-colors">
-                                    <span className="text-gray-100 hover:text-gray-300">
-                                        Try For Free
-                                    </span>
-                                </button>
-                            </Link>
                         </div>
-                    </div>
-                    <div className="flex justify-center items-center rounded">
-                        <Image
-                            src={people}
-                            alt="My Image"
-                            width={500}
-                            height={300}
-                            className=""
-                        />
                     </div>
                 </div>
             </div>
             <div className="flex flex-row justify-center">
                 <div className="flex justify-center items-start gap-10 w-8/12 h-full my-10">
-                    <div className="bg-[#394052] h-42 rounded-lg">
+                    <div className="flex flex-col justify-center items-center w-full bg-[#394052] h-42 rounded-lg">
                         <div className="mt-10 flex justify-center items-center">
                             <Image
-                                src={message}
+                                src={phone}
                                 alt="My Image"
                                 width={100}
                                 height={100}
                             />
                         </div>
-                        <p className="text-white p-6">
-                            By leveraging AI technology, our document review and
-                            consultation service can provide faster and more
-                            accurate analysis, helping to identify potential
-                            issues and save time for our clients.
+                        <p className="mt-6 mb-3 text-white font-bold text-xl">BY PHONE</p>
+                        <p className="text-center text-white px-6 pb-4">
+                            9:00 am to 4:00 pm, Monday through Friday (EST)
+                            <br />
+                            +1 (407) 391-3918
                         </p>
                     </div>
 
-                    <div className="bg-[#394052] rounded-lg">
+                    <div className="flex flex-col justify-center items-center w-full bg-[#394052] rounded-lg">
                         <div className="mt-10 flex justify-center items-center">
                             <Image
-                                src={bank}
+                                src={folder}
                                 alt="My Image"
                                 width={100}
                                 height={100}
                             />
                         </div>
-                        <p className="text-white p-6">
-                            Our document review and consultation service can
-                            help HOA members and renters understand their rights
-                            by quickly identifying relevant laws and regulations
-                            and providing clear explanations and guidance.
+                        <p className="mt-6 mb-3 text-white font-bold text-xl">START A NEW CASE</p>
+                        <p className="text-center text-white px-6 pb-4">
+                            initiate your case today by filling out our
+                            simple online form on our law firm's website
                         </p>
                     </div>
-                    <div className="bg-[#394052] rounded-lg">
+                    <div className="flex flex-col justify-center items-center w-full bg-[#394052] rounded-lg ">
                         <div className="mt-10 flex justify-center items-center">
                             <Image
-                                src={pencil}
+                                src={map}
                                 alt="My Image"
                                 width={100}
                                 height={100}
                             />
                         </div>
-                        <p className="text-white p-6">
-                            Our online document review and consultation service
-                            offers a quick and accurate way for clients to
-                            access expert analysis and advice without scheduling
-                            a live consultation, providing a time-saving
-                            solution powered by advanced AI technology.
+                        <p className="mt-6 mb-3 text-white font-bold text-xl">OUR OFFICE</p>
+                        <p className="text-center text-white px-6 pb-4">
+                            8745 Lakeview Terrace
+                            Orlando, FL 32810
                         </p>
                     </div>
                 </div>
             </div>
+
         </div>
+
     );
 }

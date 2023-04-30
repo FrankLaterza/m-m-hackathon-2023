@@ -17,7 +17,7 @@ type ChatProp = {
 };
 type ChatItems = ChatProp[];
 
-export default function Home() {
+export default function Chat() {
     const [text, setText] = useState("");
     const [items, setItems] = useState<ChatItems>([
         {id: 1, user: "bot", text: "Hello! How can I assist you today?"},
@@ -244,4 +244,3 @@ export default function Home() {
         </div>
     );
 }
-1; //1
