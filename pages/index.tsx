@@ -15,7 +15,7 @@ export default function Home() {
                     <div className="">
                         <Link href="/">
                             <span>
-                                <img className="h-8 w-auto" src="/logo.svg" alt="Logo" />
+                                <img className="h-8 w-auto" src="/owl.webp" alt="Logo" />
                             </span>
                         </Link>
                     </div>

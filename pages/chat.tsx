@@ -21,9 +21,7 @@ export default function Home() {
     const [text, setText] = useState("");
 
     const [items, setItems] = useState<ChatItems>([
-        { id: 1, user: 'human', text: 'hello' },
-        { id: 2, user: 'bot', text: 'how are you today?' },
-        { id: 3, user: 'human', text: 'i great thank you' },
+        { id: 1, user: 'bot', text: 'Hello! How can I assist you today?' },
     ]);
     function scrollToBottom() {
         window.scrollTo(0, document.body.scrollHeight);
@@ -45,7 +43,7 @@ export default function Home() {
                 >
                     <p className="text-sm">{text}</p>
                 </div>
-                <p className="text-xs text-gray-500">{user}</p>
+                <p className="text-xs text-gray-100">{user}</p>
             </div>
         );
     }
@@ -100,18 +98,18 @@ export default function Home() {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center bg-[#323848]">
             <Head>
                 <title>Messaging App</title>
                 <meta name="description" content="Messaging App" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <header className="bg-white shadow-md w-full">
+            <header className="bg-[#323848] shadow-md w-full">
                 <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
                     <div className="">
                         <Link href="/">
                             <span>
-                                <img className="h-8 w-auto" src="/logo.svg" alt="Logo" />
+                                <img className="h-8 w-auto" src="/owl.webp" alt="Logo" />
                             </span>
                         </Link>
                     </div>
@@ -119,17 +117,17 @@ export default function Home() {
                         <ul className="space-x-10 flex align-content">
                             <li>
                                 <Link href="/">
-                                    <span className="text-gray-500 hover:text-gray-700">Home</span>
+                                    <span className="text-gray-100 hover:text-gray-300">Home</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/">
-                                    <span className="text-gray-500 hover:text-gray-700">About</span>
+                                    <span className="text-gray-100 hover:text-gray-300">About</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/">
-                                    <span className="text-gray-500 hover:text-gray-700">Contact</span>
+                                    <span className="text-gray-100 hover:text-gray-300">Contact</span>
                                 </Link>
                             </li>
                         </ul>
@@ -139,7 +137,7 @@ export default function Home() {
 
             {/* text box */}
             <div className="w-11/12 mt-4 pb-14">
-                <div className="bg-gray-100">
+                <div className="rounded-lg bg-[#383838] border-2 border-[#767676]">
                     <ul className="list-disc list-inside p-10">
                         {items.map((item) => (
                             <div key={item.id}>{MessageBubble(item)}</div>
@@ -163,9 +161,22 @@ export default function Home() {
                     />
                     <button
                         type="submit"
-                        className="bg-blue-500 hover:bg-blue-600 px-4 py-2 text-white font-semibold"
-                    >
-                        Send
+                        className="bg-blue-500 hover:bg-blue-600 p-3 text-white font-semibold flex items-center justify-center"
+                        >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                            />
+                        </svg>
                     </button>
                 </div>
             </form>
